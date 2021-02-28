@@ -1,0 +1,91 @@
+.App {
+  /*font-family: sans-serif;
+  text-align: center;*/
+}
+
+.header {
+  margin: 0;
+  height: 50px;
+  background-color: #0b79bf;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 10px;
+  color: #fff;
+  font-size: 20pt;
+}
+
+.container {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+  /* display: flex;
+  flex-direction: row;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;*/
+}
+
+.welcome-wrapper {
+  margin-top: 20%;
+  display: flex;
+  justify-content: center;
+}
+
+.welcome-outer {
+  display: flex;
+  width: 90px;
+  height: 90px;
+  background-color: #4d4d4f;
+  border-radius: 50%;
+  align-content: center;
+  margin: auto;
+}
+
+.welcome-inner {
+  display: flex;
+  width: 70px;
+  height: 70px;
+  background-color: #0b79bf;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.service {
+  cursor: pointer;
+}
+
+.queue-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  height: 100%;
+  background-color: orange;
+}
+
+.queue {
+  background-color: #0b79bf;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: white;
+  font-size: 20pt;
+  flex-direction: row;
+  min-height: 300px;
+  border: none !important;
+  width: 100%;
+}
+
+.queue .p-2 div {
+  display: flex;
+  justify-content: center;
+}
+
+.queue-no {
+  font-size: 50pt;
+  margin: auto;
+  color: orange;
+}

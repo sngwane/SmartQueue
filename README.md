@@ -1,2 +1,2 @@
-# SmartQueue
+# Smart
 Created with CodeSandbox
