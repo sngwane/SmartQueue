@@ -13,14 +13,14 @@ export const Queue = () => {
     { no: 5284, service: "accounts" },
     { no: 6392, service: "accounts" },
     { no: 4478, service: "accounts" },
-    { no: 5520, service: "accounts" }
+    { no: 5520, service: "accounts" },
   ]);
 
   let counters = [];
   [1, 2, 3, 4, 5].forEach((element) => {
     counters.push({
       no: element,
-      busy: false
+      busy: false,
       //service: ["accounts", "banking"]
     });
   });
@@ -50,20 +50,21 @@ export const Queue = () => {
 
   const QueuePanel = () => {
     return (
-      <div className="d-flex flex-column">
-        <div className="p-2">TICKET#</div>
-        <div className="p-2 queue-no">{ticketNo}</div>
-        <div className="p-2">PROCEED TO COUNTER</div>
-        <div className="p-2 queue-no">{counterNo}</div>
+      <div className='d-flex flex-column'>
+        <div className='p-2'>TICKET#</div>
+        <div className='p-2 queue-no'>{ticketNo}</div>
+        <div className='p-2'>PROCEED TO COUNTER</div>
+        <div className='p-2 queue-no'>{counterNo}</div>
       </div>
     );
   };
 
   return (
     <>
-      <div className="row">
-        <div className="col-md-6 mb-3 queue-list">
-          <table className="table">
+      <div className='row'>&nbsp;</div>
+      <div className='row'>
+        <div className='col-6 mb-3 queue-list'>
+          <table className='table'>
             <thead>
               <tr>
                 <th>Ticket #</th>
@@ -78,32 +79,23 @@ export const Queue = () => {
             </tbody>
           </table>
         </div>
-      </div>
-      <div className="row">
-        <div className="queue">
-          <div className="d-inline p-2 ">
-            {tickets.length > 0 && ticketNo !== 0 ? (
-              <QueuePanel />
-            ) : (
-              <div>We are glad to help.. Stay blessed.</div>
-            )}
+
+        <div className='col-6 queue'>
+          <div className='d-inline p-2 '>
+            {tickets.length > 0 && ticketNo !== 0 ? <QueuePanel /> : <div>We are glad to help.. Stay blessed.</div>}
           </div>
         </div>
       </div>
-      <div className="row">
-        <div className="col-md-6 mb-3">
+      <div className='row'>
+        <div className='col-md-6 mb-3'>
           <br />
-          <button className="btn-primary" onClick={handleClick}>
+          <button className='btn-primary' onClick={handleClick}>
             Back to login
           </button>
           <br />
           <br />
           {counters.map((counter) => (
-            <button
-              key={counter.no}
-              className="btn-secondary"
-              onClick={(x) => handleCounterCall(counter)}
-            >
+            <button key={counter.no} className='btn-secondary' onClick={(x) => handleCounterCall(counter)}>
               Counter {counter.no}
             </button>
           ))}
